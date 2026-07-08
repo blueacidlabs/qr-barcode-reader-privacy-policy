@@ -208,15 +208,28 @@
     h2 .num{width:26px; height:26px; font-size:13px;}
   }
 
-  .lang-box{
-    display:flex; align-items:center; justify-content:flex-end; gap:10px;
-    margin:0 0 20px; font-size:13px;
+  @media (max-width:360px){
+    .wrap{padding:28px 14px 56px;}
+    header.hero{padding:20px 16px;}
+    .lang-box{justify-content:flex-start; gap:8px;}
+    .lang-box select{font-size:12.5px; padding:6px 8px;}
+    h1{font-size:26px;}
+    nav.toc{padding:16px 14px;}
+    nav.toc ol{font-size:13.5px; padding-left:16px;}
+    ul{padding-left:18px;}
+    .callout{padding:12px 14px;}
+    .pill{font-size:11px; padding:2px 6px;}
   }
-  .lang-box label{font-weight:700; color:var(--ink-soft); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;}
+
+  .lang-box{
+    display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; gap:10px;
+    margin:0 0 20px; font-size:13px; max-width:100%;
+  }
+  .lang-box label{font-weight:700; color:var(--ink-soft); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap;}
   .lang-box select{
     font-family:inherit; font-size:13.5px; color:var(--ink);
     background:var(--panel); border:1px solid var(--line); border-radius:8px;
-    padding:7px 10px; cursor:pointer;
+    padding:7px 10px; cursor:pointer; max-width:100%; min-width:0;
   }
   .lang-box select:focus{outline:2px solid var(--indigo); outline-offset:1px;}
   html[dir="rtl"] nav.toc ol{padding-left:0; padding-right:18px;}
@@ -252,7 +265,7 @@
 
   <header class="hero">
     <h1 data-i18n="h1">Privacy Policy</h1>
-    <span class="effective-date" data-i18n="effectiveDate">Effective Date: July 6, 2026</span>
+    <span class="effective-date" data-i18n="effectiveDate">Effective Date: July 8, 2026</span>
     <p class="intro" data-i18n="intro">This Privacy Policy describes how Blue Acid Labs handles information when you use our QR &amp; Barcode Reader application. We are committed to protecting your privacy and ensuring a secure, transparent user experience.</p>
   </header>
 
@@ -353,7 +366,7 @@
 
   <footer>
     <p data-i18n="footer1">© 2026 Blue Acid Labs. All rights reserved.</p>
-    <p data-i18n="footer2">QR &amp; Barcode Reader Privacy Policy — Effective July 6, 2026</p>
+    <p data-i18n="footer2">QR &amp; Barcode Reader Privacy Policy — Effective July 8, 2026</p>
   </footer>
 
 </div>
@@ -363,7 +376,7 @@ const I18N = {
   "en": {
     "langLabel": "Language",
     "h1": "Privacy Policy",
-    "effectiveDate": "Effective Date: July 6, 2026",
+    "effectiveDate": "Effective Date: July 8, 2026",
     "intro": "This Privacy Policy describes how Blue Acid Labs handles information when you use our QR & Barcode Reader application. We are committed to protecting your privacy and ensuring a secure, transparent user experience.",
     "tocLabel": "On this page",
     "toc1": "Information We Process and How We Use It",
@@ -403,12 +416,12 @@ const I18N = {
     "p-8": "If you have any questions, feedback, or privacy concerns regarding our App, please feel free to reach out to us:",
     "ul-contact": "<li><strong>Company:</strong> Blue Acid Labs</li><li><strong>Email:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. All rights reserved.",
-    "footer2": "QR & Barcode Reader Privacy Policy — Effective July 6, 2026"
+    "footer2": "QR & Barcode Reader Privacy Policy — Effective July 8, 2026"
   },
   "zh": {
     "langLabel": "语言",
     "h1": "隐私政策",
-    "effectiveDate": "生效日期：2026年7月6日",
+    "effectiveDate": "生效日期：2026年7月8日",
     "intro": "本隐私政策描述了 Blue Acid Labs 在您使用我们的二维码与条形码扫描应用程序时如何处理相关信息。我们致力于保护您的隐私，并确保安全、透明的用户体验。",
     "tocLabel": "目录",
     "toc1": "我们处理的信息及其使用方式",
@@ -448,12 +461,12 @@ const I18N = {
     "p-8": "如果您对本应用有任何问题、意见或隐私方面的疑虑，欢迎随时与我们联系：",
     "ul-contact": "<li><strong>公司：</strong>Blue Acid Labs</li><li><strong>邮箱：</strong><a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. 保留所有权利。",
-    "footer2": "二维码与条形码扫描应用隐私政策 — 生效日期：2026年7月6日"
+    "footer2": "二维码与条形码扫描应用隐私政策 — 生效日期：2026年7月8日"
   },
   "ja": {
     "langLabel": "言語",
     "h1": "プライバシーポリシー",
-    "effectiveDate": "発効日：2026年7月6日",
+    "effectiveDate": "発効日：2026年7月8日",
     "intro": "本プライバシーポリシーは、Blue Acid Labs が、QRコード＆バーコードリーダーアプリのご利用時に情報をどのように取り扱うかを説明するものです。当社はお客様のプライバシー保護と、安全かつ透明性のあるユーザー体験の提供に努めています。",
     "tocLabel": "目次",
     "toc1": "処理する情報とその利用方法",
@@ -493,12 +506,12 @@ const I18N = {
     "p-8": "本アプリに関するご質問、ご意見、またはプライバシーに関するご懸念がございましたら、お気軽にお問い合わせください。",
     "ul-contact": "<li><strong>会社名：</strong>Blue Acid Labs</li><li><strong>メール：</strong><a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. All rights reserved.",
-    "footer2": "QRコード＆バーコードリーダー プライバシーポリシー — 発効日：2026年7月6日"
+    "footer2": "QRコード＆バーコードリーダー プライバシーポリシー — 発効日：2026年7月8日"
   },
   "ko": {
     "langLabel": "언어",
     "h1": "개인정보 처리방침",
-    "effectiveDate": "시행일: 2026년 7월 6일",
+    "effectiveDate": "시행일: 2026년 7월 8일",
     "intro": "본 개인정보 처리방침은 Blue Acid Labs가 QR 및 바코드 리더 애플리케이션을 이용하실 때 정보를 어떻게 처리하는지 설명합니다. 당사는 사용자의 개인정보를 보호하고 안전하며 투명한 사용자 경험을 제공하기 위해 최선을 다하고 있습니다.",
     "tocLabel": "목차",
     "toc1": "당사가 처리하는 정보 및 이용 방법",
@@ -538,12 +551,12 @@ const I18N = {
     "p-8": "본 앱과 관련하여 질문, 의견 또는 개인정보 보호에 관한 우려 사항이 있으시면 언제든지 문의해 주시기 바랍니다.",
     "ul-contact": "<li><strong>회사:</strong> Blue Acid Labs</li><li><strong>이메일:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. All rights reserved.",
-    "footer2": "QR 및 바코드 리더 개인정보 처리방침 — 시행일: 2026년 7월 6일"
+    "footer2": "QR 및 바코드 리더 개인정보 처리방침 — 시행일: 2026년 7월 8일"
   },
   "de": {
     "langLabel": "Sprache",
     "h1": "Datenschutzerklärung",
-    "effectiveDate": "Gültig ab: 6. Juli 2026",
+    "effectiveDate": "Gültig ab: 8. Juli 2026",
     "intro": "Diese Datenschutzerklärung beschreibt, wie Blue Acid Labs Informationen verarbeitet, wenn Sie unsere QR- & Barcode-Scanner-Anwendung nutzen. Wir setzen uns für den Schutz Ihrer Privatsphäre und ein sicheres, transparentes Nutzererlebnis ein.",
     "tocLabel": "Auf dieser Seite",
     "toc1": "Informationen, die wir verarbeiten, und wie wir sie nutzen",
@@ -583,12 +596,12 @@ const I18N = {
     "p-8": "Wenn Sie Fragen, Anmerkungen oder Datenschutzbedenken zu unserer App haben, kontaktieren Sie uns gerne:",
     "ul-contact": "<li><strong>Unternehmen:</strong> Blue Acid Labs</li><li><strong>E-Mail:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Alle Rechte vorbehalten.",
-    "footer2": "Datenschutzerklärung für QR- & Barcode-Scanner — Gültig ab 6. Juli 2026"
+    "footer2": "Datenschutzerklärung für QR- & Barcode-Scanner — Gültig ab 8. Juli 2026"
   },
   "fr": {
     "langLabel": "Langue",
     "h1": "Politique de confidentialité",
-    "effectiveDate": "Date d'entrée en vigueur : 6 juillet 2026",
+    "effectiveDate": "Date d'entrée en vigueur : 8 juillet 2026",
     "intro": "Cette politique de confidentialité décrit comment Blue Acid Labs traite les informations lorsque vous utilisez notre application de lecture de codes QR et de codes-barres. Nous nous engageons à protéger votre vie privée et à garantir une expérience utilisateur sécurisée et transparente.",
     "tocLabel": "Sur cette page",
     "toc1": "Informations que nous traitons et comment nous les utilisons",
@@ -628,12 +641,12 @@ const I18N = {
     "p-8": "Si vous avez des questions, des commentaires ou des préoccupations concernant la confidentialité liées à notre Application, n'hésitez pas à nous contacter :",
     "ul-contact": "<li><strong>Entreprise :</strong> Blue Acid Labs</li><li><strong>E-mail :</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Tous droits réservés.",
-    "footer2": "Politique de confidentialité du lecteur de codes QR et codes-barres — En vigueur depuis le 6 juillet 2026"
+    "footer2": "Politique de confidentialité du lecteur de codes QR et codes-barres — En vigueur depuis le 8 juillet 2026"
   },
   "pt": {
     "langLabel": "Idioma",
     "h1": "Política de Privacidade",
-    "effectiveDate": "Data de vigência: 6 de julho de 2026",
+    "effectiveDate": "Data de vigência: 8 de julho de 2026",
     "intro": "Esta Política de Privacidade descreve como a Blue Acid Labs trata as informações quando você utiliza nosso aplicativo Leitor de QR Code e Código de Barras. Estamos comprometidos em proteger sua privacidade e garantir uma experiência de usuário segura e transparente.",
     "tocLabel": "Nesta página",
     "toc1": "Informações que Processamos e Como as Utilizamos",
@@ -673,12 +686,12 @@ const I18N = {
     "p-8": "Se você tiver dúvidas, comentários ou preocupações sobre privacidade relacionadas ao nosso Aplicativo, sinta-se à vontade para entrar em contato conosco:",
     "ul-contact": "<li><strong>Empresa:</strong> Blue Acid Labs</li><li><strong>E-mail:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Todos os direitos reservados.",
-    "footer2": "Política de Privacidade do Leitor de QR Code e Código de Barras — Vigente a partir de 6 de julho de 2026"
+    "footer2": "Política de Privacidade do Leitor de QR Code e Código de Barras — Vigente a partir de 8 de julho de 2026"
   },
   "es": {
     "langLabel": "Idioma",
     "h1": "Política de privacidad",
-    "effectiveDate": "Fecha de entrada en vigor: 6 de julio de 2026",
+    "effectiveDate": "Fecha de entrada en vigor: 8 de julio de 2026",
     "intro": "Esta Política de privacidad describe cómo Blue Acid Labs gestiona la información cuando utilizas nuestra aplicación de lector de códigos QR y de barras. Estamos comprometidos con la protección de tu privacidad y con garantizar una experiencia de usuario segura y transparente.",
     "tocLabel": "En esta página",
     "toc1": "Información que procesamos y cómo la utilizamos",
@@ -718,12 +731,12 @@ const I18N = {
     "p-8": "Si tienes alguna pregunta, comentario o inquietud sobre privacidad relacionada con nuestra Aplicación, no dudes en ponerte en contacto con nosotros:",
     "ul-contact": "<li><strong>Empresa:</strong> Blue Acid Labs</li><li><strong>Correo electrónico:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Todos los derechos reservados.",
-    "footer2": "Política de privacidad del lector de códigos QR y de barras — Vigente desde el 6 de julio de 2026"
+    "footer2": "Política de privacidad del lector de códigos QR y de barras — Vigente desde el 8 de julio de 2026"
   },
   "ar": {
     "langLabel": "اللغة",
     "h1": "سياسة الخصوصية",
-    "effectiveDate": "تاريخ السريان: 6 يوليو 2026",
+    "effectiveDate": "تاريخ السريان: 8 يوليو 2026",
     "intro": "تصف سياسة الخصوصية هذه كيفية تعامل Blue Acid Labs مع المعلومات عند استخدامك لتطبيق قارئ رموز QR والباركود الخاص بنا. نحن ملتزمون بحماية خصوصيتك وضمان تجربة مستخدم آمنة وشفافة.",
     "tocLabel": "في هذه الصفحة",
     "toc1": "المعلومات التي نعالجها وكيفية استخدامها",
@@ -763,12 +776,12 @@ const I18N = {
     "p-8": "إذا كانت لديك أي أسئلة أو ملاحظات أو مخاوف تتعلق بالخصوصية بخصوص تطبيقنا، فلا تتردّد في التواصل معنا:",
     "ul-contact": "<li><strong>الشركة:</strong> Blue Acid Labs</li><li><strong>البريد الإلكتروني:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. جميع الحقوق محفوظة.",
-    "footer2": "سياسة خصوصية قارئ رموز QR والباركود — سارية من 6 يوليو 2026"
+    "footer2": "سياسة خصوصية قارئ رموز QR والباركود — سارية من 8 يوليو 2026"
   },
   "it": {
     "langLabel": "Lingua",
     "h1": "Informativa sulla privacy",
-    "effectiveDate": "Data di entrata in vigore: 6 luglio 2026",
+    "effectiveDate": "Data di entrata in vigore: 8 luglio 2026",
     "intro": "La presente Informativa sulla privacy descrive come Blue Acid Labs gestisce le informazioni quando utilizzi la nostra applicazione di lettura di codici QR e codici a barre. Ci impegniamo a proteggere la tua privacy e a garantire un'esperienza utente sicura e trasparente.",
     "tocLabel": "In questa pagina",
     "toc1": "Informazioni che trattiamo e come le utilizziamo",
@@ -808,12 +821,12 @@ const I18N = {
     "p-8": "Se hai domande, commenti o preoccupazioni relative alla privacy riguardanti la nostra App, non esitare a contattarci:",
     "ul-contact": "<li><strong>Azienda:</strong> Blue Acid Labs</li><li><strong>E-mail:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Tutti i diritti riservati.",
-    "footer2": "Informativa sulla privacy del lettore di codici QR e codici a barre — In vigore dal 6 luglio 2026"
+    "footer2": "Informativa sulla privacy del lettore di codici QR e codici a barre — In vigore dal 8 luglio 2026"
   },
   "th": {
     "langLabel": "ภาษา",
     "h1": "นโยบายความเป็นส่วนตัว",
-    "effectiveDate": "วันที่มีผลบังคับใช้: 6 กรกฎาคม 2569",
+    "effectiveDate": "วันที่มีผลบังคับใช้: 8 กรกฎาคม 2569",
     "intro": "นโยบายความเป็นส่วนตัวฉบับนี้อธิบายถึงวิธีที่ Blue Acid Labs จัดการข้อมูลเมื่อคุณใช้งานแอปพลิเคชันสแกน QR และบาร์โค้ดของเรา เรามุ่งมั่นที่จะปกป้องความเป็นส่วนตัวของคุณ และมอบประสบการณ์การใช้งานที่ปลอดภัยและโปร่งใส",
     "tocLabel": "ในหน้านี้",
     "toc1": "ข้อมูลที่เราประมวลผลและวิธีที่เราใช้งาน",
@@ -853,12 +866,12 @@ const I18N = {
     "p-8": "หากคุณมีคำถาม ข้อเสนอแนะ หรือข้อกังวลเกี่ยวกับความเป็นส่วนตัวเกี่ยวกับแอปของเรา โปรดติดต่อเราได้ตามสะดวก:",
     "ul-contact": "<li><strong>บริษัท:</strong> Blue Acid Labs</li><li><strong>อีเมล:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs สงวนลิขสิทธิ์",
-    "footer2": "นโยบายความเป็นส่วนตัวของแอปสแกน QR และบาร์โค้ด — มีผลบังคับใช้ 6 กรกฎาคม 2569"
+    "footer2": "นโยบายความเป็นส่วนตัวของแอปสแกน QR และบาร์โค้ด — มีผลบังคับใช้ 8 กรกฎาคม 2569"
   },
   "vi": {
     "langLabel": "Ngôn ngữ",
     "h1": "Chính sách quyền riêng tư",
-    "effectiveDate": "Ngày hiệu lực: 6 tháng 7 năm 2026",
+    "effectiveDate": "Ngày hiệu lực: 8 tháng 7 năm 2026",
     "intro": "Chính sách quyền riêng tư này mô tả cách Blue Acid Labs xử lý thông tin khi bạn sử dụng ứng dụng Đọc mã QR & Mã vạch của chúng tôi. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn và đảm bảo trải nghiệm người dùng an toàn, minh bạch.",
     "tocLabel": "Trong trang này",
     "toc1": "Thông tin chúng tôi xử lý và cách chúng tôi sử dụng",
@@ -898,12 +911,12 @@ const I18N = {
     "p-8": "Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc mối quan tâm nào về quyền riêng tư liên quan đến Ứng dụng của chúng tôi, vui lòng liên hệ với chúng tôi:",
     "ul-contact": "<li><strong>Công ty:</strong> Blue Acid Labs</li><li><strong>Email:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Bảo lưu mọi quyền.",
-    "footer2": "Chính sách quyền riêng tư Đọc mã QR & Mã vạch — Có hiệu lực từ ngày 6 tháng 7 năm 2026"
+    "footer2": "Chính sách quyền riêng tư Đọc mã QR & Mã vạch — Có hiệu lực từ ngày 8 tháng 7 năm 2026"
   },
   "lo": {
     "langLabel": "ພາສາ",
     "h1": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
-    "effectiveDate": "ວັນທີມີຜົນບັງຄັບໃຊ້: 6 ກໍລະກົດ 2026",
+    "effectiveDate": "ວັນທີມີຜົນບັງຄັບໃຊ້: 8 ກໍລະກົດ 2026",
     "intro": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວນີ້ອະທິບາຍວິທີທີ່ Blue Acid Labs ຈັດການຂໍ້ມູນເມື່ອທ່ານໃຊ້ແອັບພິເຄາະ QR ແລະບາໂຄດຂອງພວກເຮົາ. ພວກເຮົາມຸ່ງໝັ້ນທີ່ຈະປົກປ້ອງຄວາມເປັນສ່ວນຕົວຂອງທ່ານ ແລະ ຮັບປະກັນປະສົບການຜູ້ໃຊ້ທີ່ປອດໄພ ແລະ ໂປ່ງໃສ.",
     "tocLabel": "ໃນໜ້ານີ້",
     "toc1": "ຂໍ້ມູນທີ່ພວກເຮົາປະມວນຜົນ ແລະ ວິທີການໃຊ້ງານ",
@@ -943,12 +956,12 @@ const I18N = {
     "p-8": "ຖ້າທ່ານມີຄຳຖາມ, ຄຳຄິດເຫັນ, ຫຼື ຄວາມກັງວົນກ່ຽວກັບຄວາມເປັນສ່ວນຕົວກ່ຽວກັບແອັບຂອງພວກເຮົາ, ກະລຸນາຕິດຕໍ່ພວກເຮົາໄດ້ຕາມສະດວກ:",
     "ul-contact": "<li><strong>ບໍລິສັດ:</strong> Blue Acid Labs</li><li><strong>ອີເມວ:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. ສະຫງວນລິຂະສິດ.",
-    "footer2": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວແອັບ QR ແລະ ບາໂຄດ — ມີຜົນບັງຄັບໃຊ້ 6 ກໍລະກົດ 2026"
+    "footer2": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວແອັບ QR ແລະ ບາໂຄດ — ມີຜົນບັງຄັບໃຊ້ 8 ກໍລະກົດ 2026"
   },
   "my": {
     "langLabel": "ဘာသာစကား",
     "h1": "ကိုယ်ရေးလုံခြုံမှုမူဝါဒ",
-    "effectiveDate": "အာဏာတည်သည့်ရက်စွဲ: ဇူလိုင် ၆ ရက်၊ ၂၀၂၆",
+    "effectiveDate": "အာဏာတည်သည့်ရက်စွဲ: ဇူလိုင် ၈ ရက်၊ ၂၀၂၆",
     "intro": "ဤကိုယ်ရေးလုံခြုံမှုမူဝါဒသည် Blue Acid Labs က QR နှင့် ဘားကုဒ်ဖတ်ရှု အက်ပလီကေးရှင်းကို အသုံးပြုစဉ် အချက်အလက်များကို မည်သို့ကိုင်တွယ်ဆောင်ရွက်သည်ကို ဖော်ပြထားပါသည်။ ကျွန်ုပ်တို့သည် သင့်ကိုယ်ရေးလုံခြုံမှုကို ကာကွယ်ရန်နှင့် လုံခြုံပြီး ပွင့်လင်းမြင်သာသော အသုံးပြုသူအတွေ့အကြုံကို ဖော်ဆောင်ပေးရန် ကတိပြုထားပါသည်။",
     "tocLabel": "ဤစာမျက်နှာတွင်",
     "toc1": "ကျွန်ုပ်တို့ ကိုင်တွယ်သည့် အချက်အလက်နှင့် အသုံးပြုပုံ",
@@ -988,12 +1001,12 @@ const I18N = {
     "p-8": "ကျွန်ုပ်တို့၏ အက်ပ်နှင့် ပတ်သက်၍ မေးခွန်းများ၊ တုံ့ပြန်ချက်များ သို့မဟုတ် ကိုယ်ရေးလုံခြုံမှုဆိုင်ရာ စိုးရိမ်မှုများ ရှိပါက ကျေးဇူးပြု၍ ကျွန်ုပ်တို့ထံ လွတ်လပ်စွာ ဆက်သွယ်ပါ။",
     "ul-contact": "<li><strong>ကုမ္ပဏီ:</strong> Blue Acid Labs</li><li><strong>အီးမေးလ်:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs။ မူပိုင်ခွင့်အားလုံး ရယူထားပြီး။",
-    "footer2": "QR နှင့် ဘားကုဒ်ဖတ်ရှု ကိုယ်ရေးလုံခြုံမှုမူဝါဒ — ဇူလိုင် ၆ ရက်၊ ၂၀၂၆ မှစတင် အာဏာတည်သည်"
+    "footer2": "QR နှင့် ဘားကုဒ်ဖတ်ရှု ကိုယ်ရေးလုံခြုံမှုမူဝါဒ — ဇူလိုင် ၈ ရက်၊ ၂၀၂၆ မှစတင် အာဏာတည်သည်"
   },
   "id": {
     "langLabel": "Bahasa",
     "h1": "Kebijakan Privasi",
-    "effectiveDate": "Tanggal Berlaku: 6 Juli 2026",
+    "effectiveDate": "Tanggal Berlaku: 8 Juli 2026",
     "intro": "Kebijakan Privasi ini menjelaskan bagaimana Blue Acid Labs menangani informasi saat Anda menggunakan aplikasi Pembaca QR & Barcode kami. Kami berkomitmen untuk melindungi privasi Anda dan memastikan pengalaman pengguna yang aman dan transparan.",
     "tocLabel": "Di halaman ini",
     "toc1": "Informasi yang Kami Proses dan Cara Kami Menggunakannya",
@@ -1033,7 +1046,7 @@ const I18N = {
     "p-8": "Jika Anda memiliki pertanyaan, masukan, atau kekhawatiran privasi terkait Aplikasi kami, jangan ragu untuk menghubungi kami:",
     "ul-contact": "<li><strong>Perusahaan:</strong> Blue Acid Labs</li><li><strong>Email:</strong> <a href=\"mailto:blue.acid.labs@gmail.com\">blue.acid.labs@gmail.com</a></li>",
     "footer1": "© 2026 Blue Acid Labs. Semua hak dilindungi.",
-    "footer2": "Kebijakan Privasi Pembaca QR & Barcode — Berlaku sejak 6 Juli 2026"
+    "footer2": "Kebijakan Privasi Pembaca QR & Barcode — Berlaku sejak 8 Juli 2026"
   }
 };
 
